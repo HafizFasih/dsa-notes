@@ -64,6 +64,11 @@ const config: Config = {
           label: '📚 Study Notes',
         },
         {
+          to: '/docs/exam-qa/differences',
+          label: '❓ Exam Q&A',
+          position: 'left',
+        },
+        {
           to: '/original-notes',
           label: '📄 Original Notes',
           position: 'left',
