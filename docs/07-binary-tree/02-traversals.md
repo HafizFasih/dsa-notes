@@ -31,15 +31,14 @@ Level Order Search (BFS):
 
 ### Pseudocode
 ```
-Function LevelOrder(root):
-  If root == NULL: return
-  Create a Queue Q
-  Enqueue(root)
+Function levelOrder(root):
+  If root is None: return
+  Q = [root]
   While Q is not empty:
-    node = Dequeue(Q)
-    print node.data
-    If node.left != NULL: Enqueue(node.left)
-    If node.right != NULL: Enqueue(node.right)
+    node = Q.pop_front()
+    print(node.data)
+    If node.left  is not None: Q.append(node.left)
+    If node.right is not None: Q.append(node.right)
 ```
 
 ---
@@ -77,11 +76,10 @@ Function preorder(root):
 ```
 In-order Traversal (DFS):
   1. Start from root node
-  2. Move to left subtree — keep going until you reach
-     a node with no left child
-  3. Visit (process) that node
-  4. Move to its right subtree
-  5. Repeat process for all nodes
+  2. Move to the left subtree and repeat the same process
+  3. After finishing left subtree, visit (process) the node
+  4. Move to the right subtree
+  5. Repeat until all nodes are visited
 ```
 
 ### Pseudocode
@@ -103,12 +101,10 @@ Function inorder(root):
 ```
 Post-order Traversal (DFS):
   1. Start from root node
-  2. If the tree is empty → stop (Return NULL)
-  3. Move to the left subtree
-  4. Traverse the entire left subtree recursively,
-     then move to right subtree and repeat
-  5. After both subtrees visited → process (visit) root node
-  6. Repeat for all nodes until traversal is completed
+  2. Move to the left subtree and repeat the same process
+  3. After finishing left subtree, move to the right subtree and repeat
+  4. After both subtrees are finished, visit (process) the root node
+  5. Repeat until all nodes are visited
 ```
 
 ### Pseudocode
