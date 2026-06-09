@@ -34,24 +34,24 @@ DFS(Graph, start):
 ### DFS Example (from class notes)
 ```
 Graph:
-    A
-   /|\
-  B F G
-  |\ \  \
-  C I D  H
-  |  \
-  E   J
-       \
-        K
+      A
+     /|\
+    B D E
+   / \
+  F   I
+  |   |
+  G   H
+  |
+  C
 
 DFS from A:
 Stack trace:
 Stack        | Print
 A            | A
 E, D, B      | B
-E, D, F, C   | F
+E, D, I, F   | F
 E, D, I, G   | G
-E, D, I, C   | C (from G side)
+E, D, I, C   | C
 E, D, I      | I
 E, D, H      | H
 E, D         | D
