@@ -75,11 +75,10 @@ Function preorder(root):
 ### Algorithm
 ```
 In-order Traversal (DFS):
-  1. Start from root node
-  2. Move to the left subtree and repeat the same process
-  3. After finishing left subtree, visit (process) the node
-  4. Move to the right subtree
-  5. Repeat until all nodes are visited
+  1. Go to the leftmost node (keep moving left until no left child)
+  2. Visit (process) that node
+  3. Move to the right subtree and repeat the same process
+  4. Repeat until all nodes are visited
 ```
 
 ### Pseudocode
@@ -100,11 +99,10 @@ Function inorder(root):
 ### Algorithm
 ```
 Post-order Traversal (DFS):
-  1. Start from root node
-  2. Move to the left subtree and repeat the same process
-  3. After finishing left subtree, move to the right subtree and repeat
-  4. After both subtrees are finished, visit (process) the root node
-  5. Repeat until all nodes are visited
+  1. Go to the leftmost node (keep moving left until no left child)
+  2. Move to the right subtree and repeat the same process
+  3. After both left and right subtrees are finished, visit (process) that node
+  4. Repeat until all nodes are visited
 ```
 
 ### Pseudocode
