@@ -81,26 +81,25 @@ A **Graph** is a general non-linear data structure used to represent complex rel
 ### Adjacency List (from class example)
 
 ```
-Graph:
-       A
-      /|\
-     B D E
-    /|   |
-   C F   H
-   |     |
-   G J   I
-   |
-   K
+Graph (9 nodes: A – I):
+
+      G ─── A ─── E
+      │    / \     \
+      I   B   D     H
+      │   │   │
+      └── B   C ───(also → B, D)
+          │
+          F
 ```
 
 | Node | Adjacent Nodes |
 |------|---------------|
 | A | B, D, E |
-| B | C, A |
-| C | F |
-| D | B, C |
-| E | C, D, J |
-| F | H |
+| B | F |
+| C | B, D |
+| D | C, H |
+| E | H |
+| F | — |
 | G | A, I |
 | H | — |
 | I | B, G |
